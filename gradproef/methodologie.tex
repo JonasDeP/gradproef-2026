@@ -1,0 +1,54 @@
+%%=============================================================================
+%% Methodologie
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Methodologie}{Methodology}}%
+\label{ch:methodologie}
+
+Om de onderzoeksvraag te beantwoorden en het handmatige verificatieproces succesvol te automatiseren, is gekozen voor een stapsgewijze en iteratieve aanpak. Door het project op te delen in overzichtelijke fasen, kon de overgang van de initiele data-analyse naar de uiteindelijke integratie in de gebruikersflow gestructureerd verlopen. Dit hoofdstuk geeft een beknopt overzicht van deze fasen, de bijbehorende doelstellingen en de opgeleverde resultaten (deliverables). 
+
+De werkelijke technische realisatie en de details van deze stappen worden verder uitgediept in het volgende hoofdstuk.
+
+\section{\IfLanguageName{dutch}{Fase 1: Behoefteanalyse en Datamodellering}{Phase 1: Requirements Analysis and Data Modeling}}%
+\label{sec:methode-fase1}
+
+De eerste fase van het project richtte zich op het in kaart brengen van de benodigde informatie. Om een component succesvol te kunnen registreren voor een release, moest eerst exact bepaald worden welke data het systeem nodig had. 
+
+\begin{itemize}
+  \item \textbf{Doelstelling:} Het bepalen van de benodigde invoerdata en het ontwerpen van een formulier waarmee developers deze data efficiënt kunnen aanleveren.
+  \item \textbf{Methode:} Een analyse van het bestaande handmatige proces om te bepalen welke variabelen cruciaal zijn voor de rest van de workflow.
+  \item \textbf{Deliverable:} Een gedefinieerd datamodel en de velden voor een registratieformulier dat als startpunt van de automatisering dient.
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Fase 2: API-analyse en Backend-ontwikkeling}{Phase 2: API Analysis and Backend Development}}%
+\label{sec:methode-fase2}
+
+Zodra duidelijk was welke data via het formulier werd verzameld, moest worden vastgesteld hoe deze data verwerkt diende te worden. Dit vereiste interactie met verschillende achterliggende systemen via API's. 
+
+\begin{itemize}
+  \item \textbf{Doelstelling:} Het faciliteren van de juiste acties op basis van de ingevoerde formulierdata.
+  \item \textbf{Methode:} Het uitvoeren van een gap-analyse tussen de reeds bestaande API's binnen Amaron en de API's die nog ontbraken voor dit specifieke verificatieproces. Waar functionaliteit ontbrak, werden nieuwe, specifieke API-endpoints geschreven en getest.
+  \item \textbf{Deliverable:} Een set van werkende API-koppelingen die de data kunnen wegschrijven, ophalen en valideren.
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Fase 3: Integratie en Workflow-optimalisatie}{Phase 3: Integration and Workflow Optimization}}%
+\label{sec:methode-fase3}
+
+Met de backend-logica (API's) en de frontend-invoer (het formulier) op hun plek, was de volgende logische stap het samenvoegen van deze elementen tot één vloeiend proces. Hierbij was de gebruikerservaring (UX) voor de developers van groot belang.
+
+\begin{itemize}
+  \item \textbf{Doelstelling:} Het naadloos integreren van de ontwikkelde API's in de algehele flow, zodat het proces voor de eindgebruiker zo vlot en intuïtief mogelijk verloopt.
+  \item \textbf{Methode:} Nauwe samenwerking en afstemming met de interaction designer. De technische API-calls werden gekoppeld aan de visuele flow-stappen die door de designer waren uitgetekend.
+  \item \textbf{Deliverable:} Een geautomatiseerde, werkende workflow waarin dataregistratie en achtergrondverwerking succesvol geïntegreerd zijn.
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Fase 4: Testen en Validatie}{Phase 4: Testing and Validation}}%
+\label{sec:methode-fase4}
+
+In de afrondende fase wordt de gebouwde proof of concept (PoC) gevalideerd in de praktijk.
+
+\begin{itemize}
+  \item \textbf{Doelstelling:} Controleren of de ontwikkelde workflow daadwerkelijk de frustraties en tijdsverspilling van het handmatige proces oplost.
+  \item \textbf{Methode:} Functioneel testen van de componentenregistratie en het genereren van het uiteindelijke release-overzicht voor het DevOps-team.
+  \item \textbf{Deliverable:} Een gevalideerd verificatieplatform klaar voor verdere uitrol of iteratie.
+\end{itemize}

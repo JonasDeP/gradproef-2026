@@ -1,0 +1,62 @@
+%%=============================================================================
+%% Inleiding
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
+\label{ch:inleiding}
+
+Binnen de moderne softwareontwikkeling is een efficiënt en betrouwbaar releaseproces cruciaal om kwalitatieve oplossingen snel tot bij de eindgebruiker te krijgen. Bij het softwarebedrijf Amaron wordt gewerkt met een vaste releasecyclus van twee tot vier weken. Het bedrijf is opgebouwd uit een ecosysteem van inmiddels circa 40 verschillende componenten en modules, die gebundeld in de hoofdrelease worden uitgerold. 
+
+Naarmate dit ecosysteem is gegroeid, is de complexiteit van het releasebeheer evenredig toegenomen. Waar in het verleden het overzicht eenvoudig te behouden was, vereist de huidige schaal een meer gestructureerde aanpak. Deze graduaatsproef richt zich op de optimalisatie en automatisering van dit specifieke onderdeel binnen de releasecyclus van Amaron.
+
+\section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
+\label{sec:probleemstelling}
+
+Voorafgaand aan elke release is momenteel een handmatige controle vereist om te bepalen of alle onderliggende componenten gereed en compleet zijn voor integratie. Dit verificatieproces zorgt voor vele frustraties en is door de groeiende omvang van het ecosysteem tijdrovend en foutgevoelig geworden. Het gebrek aan een centraal overzicht leidt tot vertragingen in de doorlooptijd van de hoofdrelease en miscommunicatie. 
+
+De directe doelgroep voor de oplossing van dit probleem bevindt zich intern bij Amaron. Specifiek gaat het om:
+
+\begin{itemize}
+  \item \textbf{Het DevOps-team:} Zij zijn verantwoordelijk voor de uiteindelijke uitrol en hebben momenteel geen accuraat, realtime overzicht van welke componenten klaar zijn voor de release.
+  \item \textbf{De softwareontwikkelaars (developers):} Zij besteden momenteel te veel tijd aan communicatie en handmatige afstemming over de status van hun afgewerkte componenten.
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
+\label{sec:onderzoeksvraag}
+
+Om het bovengenoemde probleem op te lossen, is de volgende centrale onderzoeksvraag geformuleerd:
+
+\textbf{``Hoe kan het handmatige verificatieproces voor de release van softwarecomponenten binnen Amaron efficiënt en foutloos geautomatiseerd worden?''}
+
+Om deze centrale vraag te beantwoorden, is deze opgesplitst in de volgende deelvragen:
+
+\begin{enumerate}
+  \item Wat zijn de huidige technische en procesmatige knelpunten in de handmatige releasevoorbereiding?
+  \item Welke API-koppelingen en automatiseringslogica zijn vereist om de status van een component onafhankelijk te verifiëren?
+  \item Hoe kan de samenwerking tussen developers en het DevOps-team gestroomlijnd worden via een centraal dashboard?
+\end{enumerate}
+
+\section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
+\label{sec:onderzoeksdoelstelling}
+
+Het beoogde resultaat van deze graduaatsproef is de oplevering van een functionerend verificatieplatform (een werkend prototype) dat geïntegreerd is in de bestaande workflow van Amaron. 
+
+Het project wordt als succesvol beschouwd wanneer aan de volgende criteria is voldaan:
+
+\begin{itemize}
+  \item Developers kunnen een afgewerkt component eenvoudig zelf registreren.
+  \item Het DevOps-team kan in één oogopslag bepalen welke componenten meegenomen moeten worden in de release.
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Opzet van deze graduaatsproef}{Structure of this associate thesis}}%
+\label{sec:opzet-graduaatsproef}
+
+De rest van deze graduaatsproef is als volgt opgebouwd:
+
+In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+
+In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+
+In Hoofdstuk~\ref{ch:realisatie} wordt de technische realisatie en implementatie van het platform besproken. Hierin komen de architectuur, de opbouw van de API-koppelingen en de creatie van het dashboard aan bod. \textbf{(Let op: pas het label `ch:realisatie` aan naar het werkelijke label van jouw implementatiehoofdstuk, indien dit anders heet).}
+
+In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.

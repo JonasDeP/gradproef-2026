@@ -1,0 +1,38 @@
+%%=============================================================================
+%% Conclusie
+%%=============================================================================
+
+\chapter{Conclusie}%
+\label{ch:conclusie}
+
+Deze graduaatsproef is gestart vanuit een concrete en urgente behoefte binnen Amaron: het stroomlijnen van een releaseproces dat, door de groei naar een ecosysteem van circa 40 componenten, te complex, tijdrovend en frustrerend was geworden. Het handmatig verifiëren van de status van elk component zorgde voor een bottleneck bij het DevOps-team en onnodige communicatie-overhead voor de developers. 
+
+\section{Beantwoording van de onderzoeksvraag}
+
+De centrale onderzoeksvraag van dit project luidde: \textit{``Hoe kan het handmatige verificatieproces voor de release van softwarecomponenten binnen Amaron efficiënt en foutloos geautomatiseerd worden?''}
+
+Uit de realisatie en de testfase is gebleken dat dit succesvol kan worden geautomatiseerd door een decentrale benadering te combineren met gecentraliseerde zichtbaarheid. Het antwoord op de onderzoeksvraag ligt in de ontwikkelde workflow:
+\begin{itemize}
+  \item \textbf{Decentrale registratie:} Developers nemen zelf de verantwoordelijkheid om een afgewerkt component te registreren via een intuïtief formulier, wat direct gekoppeld is aan de visuele flow van de interaction designer.
+  \item \textbf{Geautomatiseerde verificatie:} Door het ontwikkelen en aanroepen van specifieke API's worden de noodzakelijke controles op de achtergrond uitgevoerd zonder menselijke tussenkomst.
+  \item \textbf{Gecentraliseerd overzicht:} Alle gevalideerde data stroomt samen in één overzichtelijk dashboard, waardoor het DevOps-team in één oogopslag de gereedheid van de release kan beoordelen.
+\end{itemize}
+
+\section{Meerwaarde en impact}
+
+De implementatie van dit platform biedt een aanzienlijke meerwaarde voor de interne werking van Amaron. De frustraties die gepaard gingen met het constant moeten navragen van statussen zijn weggenomen. Voor de developers betekent dit minder onderbrekingen in hun werk, en voor het DevOps-team betekent het een drastische reductie in voorbereidingstijd voor een release. Bovendien is de foutgevoeligheid geminimaliseerd, omdat de controle nu leunt op objectieve data uit API's in plaats van op menselijke interpretatie of handmatige checklists.
+
+\section{Kritische reflectie}
+
+Hoewel het ontwikkelde systeem de vooropgestelde doelen behaalt, is een kritische blik op het resultaat op zijn plaats. De automatisering werkt technisch naar behoren, maar het succes van het platform is sterk afhankelijk van de adoptie door de gebruikers. Als developers vergeten het registratieformulier in te vullen, is het overzicht voor DevOps alsnog incompleet. De oplossing is momenteel dus nog deels afhankelijk van een menselijke handeling aan de start van de flow. Daarnaast bevond het platform zich aan het einde van dit onderzoek nog in de afrondende testfase, waardoor langetermijndata over de daadwerkelijke tijdwinst per releasecyclus nog verder gekwantificeerd moet worden.
+
+\section{Aanbevelingen en toekomstig onderzoek}
+
+Dit project heeft een solide basis gelegd voor geautomatiseerd releasebeheer binnen Amaron, maar opent ook deuren voor verdere optimalisatie. Voor de toekomst worden de volgende stappen aanbevolen:
+\begin{itemize}
+  \item \textbf{Volledige CI/CD integratie:} Onderzoeken of de initiële registratiestap door de developer volledig weggenomen kan worden, door deze trigger in te bouwen in de bestaande CI/CD pipelines (bijvoorbeeld automatisch registreren bij een specifieke Git-merge).
+  \item \textbf{Uitbreiding van API-controles:} Het toevoegen van meer diepgaande kwaliteitscontroles, zoals het automatisch ophalen van security scans of test coverage rapporten voordat een component als `gereed` wordt gemarkeerd op het dashboard.
+  \item \textbf{Gefaseerde uitrol:} Het systeem stapsgewijs uitrollen voor alle 40+ componenten, begeleid door duidelijke documentatie en training voor de developers om de adoptie te garanderen.
+\end{itemize}
+
+Samenvattend is met dit project een belangrijke stap gezet in de professionalisering en schaalbaarheid van het releaseproces bij Amaron, waarmee een solide technische basis is gelegd voor toekomstige groei.

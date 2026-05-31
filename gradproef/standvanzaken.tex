@@ -1,0 +1,39 @@
+\chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}%
+\label{ch:stand-van-zaken}
+
+In het vorige hoofdstuk werd de probleemstelling rondom het handmatige en foutgevoelige releaseproces bij Amaron toegelicht. Om een gerichte en toekomstbestendige oplossing te kunnen ontwerpen, is een goed begrip van de onderliggende technologieën, best practices en methodieken essentieel. Dit hoofdstuk schetst de theoretische achtergrond en de huidige stand van zaken binnen de domeinen van release management, automatisering en API-integraties. Deze literatuurstudie vormt de fundering voor de keuzes die in Hoofdstuk~\ref{ch:methodologie} (Methodologie) en de uiteindelijke realisatie worden gemaakt.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{grail.jpg}
+  \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
+\end{figure}
+
+\begin{listing}
+  \begin{minted}{python}
+    import pandas as pd
+    import seaborn as sns
+
+    penguins = sns.load_dataset('penguins')
+    sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
+  \end{minted}
+  \caption[Voorbeeld codefragment]{Voorbeeld van het invoegen van een codefragment.}
+\end{listing}
+
+\lipsum[7-20]
+
+\begin{table}
+  \centering
+  \begin{tabular}{lcr}
+    \toprule
+    \textbf{Kolom 1} & \textbf{Kolom 2} & \textbf{Kolom 3} \\
+    $\alpha$         & $\beta$          & $\gamma$         \\
+    \midrule
+    A                & 10.230           & a                \\
+    B                & 45.678           & b                \\
+    C                & 99.987           & c                \\
+    \bottomrule
+  \end{tabular}
+  \caption[Voorbeeld tabel]{\label{tab:example}Voorbeeld van een tabel.}
+\end{table}
+

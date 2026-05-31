@@ -1,0 +1,47 @@
+%%=============================================================================
+%% Samenvatting
+%%=============================================================================
+
+% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
+% thesis) synthese van het document.
+%
+% Een goede abstract biedt een kernachtig antwoord op volgende vragen:
+%
+% 1. Waarover gaat de graduaatsproef?
+% 2. Waarom heb je er over geschreven?
+% 3. Hoe heb je het onderzoek uitgevoerd?
+% 4. Wat waren de resultaten? Wat blijkt uit je onderzoek?
+% 5. Wat betekenen je resultaten? Wat is de relevantie voor het werkveld?
+%
+% Daarom bestaat een abstract uit volgende componenten:
+%
+% - inleiding + kaderen thema
+% - probleemstelling
+% - (centrale) onderzoeksvraag
+% - onderzoeksdoelstelling
+% - methodologie
+% - resultaten (beperk tot de belangrijkste, relevant voor de onderzoeksvraag)
+% - conclusies, aanbevelingen, beperkingen
+%
+% LET OP! Een samenvatting is GEEN voorwoord!
+
+%%---------- Nederlandse samenvatting -----------------------------------------
+%
+% TODO: Als je je graduaatsproef in het Engels schrijft, moet je eerst een
+% Nederlandse samenvatting invoegen. Haal daarvoor onderstaande code uit
+% commentaar.
+% Wie zijn/haar graduaatsproef in het Nederlands schrijft, kan dit negeren, de inhoud
+% wordt niet in het document ingevoegd.
+
+
+
+%%---------- Samenvatting -----------------------------------------------------
+% De samenvatting in de hoofdtaal van het document
+
+\chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
+
+Binnen de softwareontwikkeling bij Amaron wordt gewerkt met een vaste releasecyclus van twee tot vier weken. Het bedrijf is opgebouwd uit een ecosysteem van inmiddels circa 40 verschillende componenten en modules, die gebundeld in de hoofdrelease worden uitgerold. Voorafgaand aan elke release is momenteel een handmatige controle vereist om te bepalen of al deze onderliggende modules gereed en compleet zijn voor integratie. Dit verificatieproces zorgt voor vele frustraties en is door de groeiende omvang van het ecosysteem tijdrovend en foutgevoelig geworden. Het gebrek aan een centraal overzicht leidt tot vertragingen in de doorlooptijd van de hoofdrelease, miscommunicatie en aanzienlijke frustraties binnen het ontwikkelteam.
+
+Om de efficiëntie en betrouwbaarheid van het releaseproces te waarborgen, is in deze graduaatsproef een geautomatiseerd verificatieplatform ontwikkeld. De realisatie hiervan is stapsgewijs en modulair aangepakt, waarbij verschillende API-koppelingen en automatiseringslogica zijn opgebouwd. Binnen de nieuwe workflow registreren developers zelf een component zodra deze gereed is. Na het doorlopen van alle automatische stappen en controles bundelt het platform deze data tot één centraal en overzichtelijk dashboard. Hierdoor kan het DevOps-team in één oogopslag effectief zien welke componenten gereed zijn en meegenomen moeten worden in de aankomende release.
+
+Hoewel het platform zich momenteel in de eindfase van het testproces bevindt, wijzen de eerste validaties op een sterke verbetering. Het systeem slaagt erin de status van de componenten onafhankelijk te verifiëren, waardoor de menselijke foutgevoeligheid en de tijd die benodigd is voor handmatige controles drastisch worden gereduceerd. De introductie van dit platform zorgt ervoor dat de componentregistratie en het releasebeheer aanzienlijk gestroomlijnder verlopen. Door de automatisering verdwijnt de complexiteit van de handmatige checks. Dit resulteert in een kortere doorlooptijd van releases, een vlottere interne communicatie en een duidelijke afname van de frustraties op de werkvloer. Hiermee is een schaalbare oplossing gecreëerd waarmee Amaron ook in de toekomst een groeiend aantal componenten efficiënt kan blijven beheren.
