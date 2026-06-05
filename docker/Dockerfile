@@ -8,9 +8,11 @@ RUN apt-get update && apt-get install -y \
     biber \
     git \
     texlive-xetex \
+    python3 \
     python3-pip \
-    latexmk \
-    && pip install pygments \
-    && rm -rf /var/lib/apt/lists/*
+    python-is-python3 \
+    latexmk && \
+    pip install pygments && \
+    rm -rf /var/lib/apt/lists/*
 COPY fonts/ /usr/share/fonts/opentype
 RUN fc-cache -f -v

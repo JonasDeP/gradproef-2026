@@ -9,7 +9,7 @@ Om de onderzoeksvraag te beantwoorden en het handmatige verificatieproces succes
 
 De werkelijke technische realisatie en de details van deze stappen worden verder uitgediept in het volgende hoofdstuk.
 
-\section{\IfLanguageName{dutch}{Fase 1: Behoefteanalyse en Datamodellering}{Phase 1: Requirements Analysis and Data Modeling}}%
+\section{\IfLanguageName{dutch}{Behoefteanalyse en Datamodellering}{Phase 1: Requirements Analysis and Data Modeling}}%
 \label{sec:methode-fase1}
 
 De eerste fase van het project richtte zich op het in kaart brengen van de benodigde informatie. Om een component succesvol te kunnen registreren voor een release, moest eerst exact bepaald worden welke data het systeem nodig had. 
@@ -20,7 +20,7 @@ De eerste fase van het project richtte zich op het in kaart brengen van de benod
   \item \textbf{Deliverable:} Een gedefinieerd datamodel en de velden voor een registratieformulier dat als startpunt van de automatisering dient.
 \end{itemize}
 
-\section{\IfLanguageName{dutch}{Fase 2: API-analyse en Backend-ontwikkeling}{Phase 2: API Analysis and Backend Development}}%
+\section{\IfLanguageName{dutch}{API-analyse en Backend-ontwikkeling}{Phase 2: API Analysis and Backend Development}}%
 \label{sec:methode-fase2}
 
 Zodra duidelijk was welke data via het formulier werd verzameld, moest worden vastgesteld hoe deze data verwerkt diende te worden. Dit vereiste interactie met verschillende achterliggende systemen via API's. 
@@ -31,7 +31,7 @@ Zodra duidelijk was welke data via het formulier werd verzameld, moest worden va
   \item \textbf{Deliverable:} Een set van werkende API-koppelingen die de data kunnen wegschrijven, ophalen en valideren.
 \end{itemize}
 
-\section{\IfLanguageName{dutch}{Fase 3: Integratie en Workflow-optimalisatie}{Phase 3: Integration and Workflow Optimization}}%
+\section{\IfLanguageName{dutch}{Integratie en Workflow-optimalisatie}{Phase 3: Integration and Workflow Optimization}}%
 \label{sec:methode-fase3}
 
 Met de backend-logica (API's) en de frontend-invoer (het formulier) op hun plek, was de volgende logische stap het samenvoegen van deze elementen tot één vloeiend proces. Hierbij was de gebruikerservaring (UX) voor de developers van groot belang.
@@ -42,7 +42,19 @@ Met de backend-logica (API's) en de frontend-invoer (het formulier) op hun plek,
   \item \textbf{Deliverable:} Een geautomatiseerde, werkende workflow waarin dataregistratie en achtergrondverwerking succesvol geïntegreerd zijn.
 \end{itemize}
 
-\section{\IfLanguageName{dutch}{Fase 4: Testen en Validatie}{Phase 4: Testing and Validation}}%
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=0.9\linewidth]{form}
+  \captionof{figure}[Formulierinterface]{Dit voorbeeld toont de interface van een formulier, voorzien van diverse gegevensvelden voor zowel datavisualisatie als gebruikersinvoer, aangevuld met actieknoppen voor navigatie en functie-uitvoering.}
+\end{center}
+
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=1.0\linewidth]{id}
+  \captionof{figure}[Interaction designer]{Op de bijgevoegde screenshot zie je de visuele weergave van de interaction designer. Deze opzet illustreert mooi hoe de verschillende elementen met elkaar verbonden zijn om complexe handelingen op de achtergrond te stroomlijnen.}
+\end{center}
+
+\section{\IfLanguageName{dutch}{Testen en Validatie}{Phase 4: Testing and Validation}}%
 \label{sec:methode-fase4}
 
 In de afrondende fase wordt de gebouwde proof of concept (PoC) gevalideerd in de praktijk.

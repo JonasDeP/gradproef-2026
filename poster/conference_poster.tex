@@ -1,86 +1,84 @@
-%==============================================================================
-% Sjabloon poster bachproef
-%==============================================================================
-% Gebaseerd op document class `a0poster' door Gerlinde Kettl en Matthias Weiser
-% Aangepast voor gebruik aan HOGENT door Jens Buysse en Bert Van Vreckem
-
 \documentclass[a0,portrait]{hogent-poster}
 
 % Info over de opleiding
 \course{Graduaatsproef}
 \studyprogramme{Graduaat in het Programmeren}
-\academicyear{2022-2023}
+\academicyear{2025-2026}
 \institution{Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent}
 
 % Info over de bachelorproef
-\title{Titel van je graduaatsproef}
-\subtitle{Ondertitel (eventueel)}
-\author{Voornaam Naam}
-\email{voornaam.familienaam@student.hogent.be}
-\supervisor{Voornaam Naam}
-\cosupervisor{Voornaam Naam (Bedrijf)}
+\title{Automatisering van Release-verificatie binnen de Amaron Releasecyclus.}
+\author{De Pus Jonas}
+\email{jonas.depus@student.hogent.be}
+\supervisor{Willem Delvaux (Hogeschool)}
+\cosupervisor{Koen Casier (Bedrijf)}
 
-% Indien ingevuld, wordt deze informatie toegevoegd aan het einde van de
-% abstract. Zet in commentaar als je dit niet wilt.
 \specialisation{Programmeren}
-\keywords{Lambda-calculus, Scheme}
-\projectrepo{https://github.com/user/repo}
+\keywords{DevOps, CI/CD, Release Management, API, Automatisering}
+\projectrepo{https://github.com/JonasDeP/gradproef-2026.git}
 
 \begin{document}
+
+\raggedbottom 
 
 \maketitle
 
 \begin{abstract}
-It's only a model.
-You don't vote for kings. Who's that then? We found them. Ni! Ni! Ni! Ni!
-The nose? On second thoughts, let's not go there. It is a silly place. Bloody Peasant! And the hat. She's a witch! Where'd you get the coconuts?
+Binnen Amaron zorgt de handmatige controle van circa 40 softwarecomponenten voorafgaand aan elke release voor veel tijdverlies, fouten en frustraties. Het ontbreken van een centraal overzicht leidt tot vertragingen en miscommunicatie tussen developers en het DevOps-team.
+
+Om dit op te lossen, is een geautomatiseerd verificatieplatform ontwikkeld. Developers registreren hun afgewerkte componenten nu zelf, waarna API-koppelingen de status automatisch en onafhankelijk verifiëren. Deze data wordt gebundeld in één centraal dashboard, waardoor het DevOps-team in één oogopslag ziet welke componenten klaar zijn voor de uitrol. Dit platform elimineert tijdrovende handmatige checks, reduceert de foutgevoeligheid drastisch en zorgt voor kortere doorlooptijden. Het resultaat is een vlottere samenwerking, minder frustraties en een schaalbare oplossing voor toekomstige groei.
 \end{abstract}
 
-\begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+\begin{multicols}{2} 
 
 \section{Introductie}
 
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+Binnen de moderne softwareontwikkeling is een efficiënt en betrouwbaar releaseproces cruciaal om kwalitatieve oplossingen snel tot bij de eindgebruiker te krijgen. Bij het softwarebedrijf Amaron wordt gewerkt met een vaste releasecyclus van twee tot vier weken. Het bedrijf is opgebouwd uit een ecosysteem van inmiddels circa 40 verschillende componenten en modules, die gebundeld in de hoofdrelease worden uitgerold.
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say `Ni' again to you, if you do not appease us.
-
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
-
-You can't expect to wield supreme power just `cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
-
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+Naarmate dit ecosysteem is gegroeid, is de complexiteit van het releasebeheer evenredig toegenomen. Waar in het verleden het overzicht eenvoudig te behouden was, vereist de huidige schaal een meer gestructureerde aanpak. Deze graduaatsproef richt zich op de optimalisatie en automatisering van dit specifieke onderdeel binnen de releasecyclus van Amaron.
 
 \section{Experimenten}
 
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
+Om de betrouwbaarheid en gebruiksvriendelijkheid van het platform te garanderen, is het systeem in drie fasen getest:
 
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
-
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
-
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
-
-\section{Sectie met figuur}
-
-De {\LaTeX} figure-omgeving bepaalt zelf waar een afbeelding komt en dat is meestal niet op de plek in de tekst waar de figure-omgeving gedefinieerd wordt. Als je wilt forceren dat afbeeldingen toch in de flow van de tekst blijven, dan kan je dat zoals hieronder:
-
-\begin{center}
-  \captionsetup{type=figure}
-  \includegraphics[width=1.0\linewidth]{grail}
-  \captionof{figure}{He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say `Ni' again to you, if you do not appease us}
-\end{center}
-
-Let er wel op dat dit tot problemen met bladschikking kan leiden.
+\begin{itemize}
+  \setlength{\itemsep}{0.5em}
+  \setlength{\parskip}{0pt}
+  \item \textbf{Technische validatie:} De ontwikkelde API-koppelingen zijn uitgebreid getest om een foutloze dataverwerking en communicatie met de achterliggende systemen te verzekeren.
+  \item \textbf{End-to-End simulatie:} In een testomgeving is een volledige releasecyclus gesimuleerd om te verifiëren of geregistreerde componenten correct en realtime op het centrale dashboard verschijnen.
+  \item \textbf{Gebruikerstesten:} Samen met de developers is het registratieformulier in de praktijk getest en geoptimaliseerd, zodat de flow intuïtief aanvoelt en een vlotte adoptie binnen het team gegarandeerd is.
+\end{itemize}
 
 \section{Conclusies}
 
-Don't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+Dit project toont aan dat het handmatige en foutgevoelige releaseproces bij Amaron succesvol geautomatiseerd kan worden. Door een workflow te ontwikkelen waarbij developers hun afgewerkte componenten registreren en API-koppelingen de verificatie overnemen, krijgt het DevOps-team via één centraal dashboard direct een realtime overzicht. Deze oplossing reduceert niet alleen het tijdsverlies en de menselijke foutgevoeligheid, maar neemt ook de aanzienlijke communicatie-overhead en bijbehorende frustraties op de werkvloer weg.
 
 \section{Toekomstig onderzoek}
 
-I care. So, what do you think of her, Han? No! Alderaan is peaceful. We have no weapons. You can't possibly… I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
+Hoewel het platform momenteel technisch succesvol is, blijft het afhankelijk van een menselijke handeling aan de start van de flow. Om dit in de toekomst verder te optimaliseren, worden de volgende stappen aanbevolen:
 
-Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. You are a part of the Rebel Alliance and a traitor! Take her away! 
+\begin{itemize}
+  \setlength{\itemsep}{0.5em}
+  \setlength{\parskip}{0pt}
+  \item \textbf{Volledige CI/CD integratie:} De initiële registratiestap wegnemen door automatische triggers in te bouwen bij een specifieke Git-merge.
+  \item \textbf{Extra API-controles:} Het automatisch ophalen van security scans en testrapporten toevoegen aan de verificatieflow.
+  \item \textbf{Gefaseerde uitrol:} Het systeem stapsgewijs implementeren voor alle 40+ componenten, inclusief training voor een optimale adoptie binnen het team.
+\end{itemize}
+
+\section{Sectie met figuur}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=0.9\linewidth]{form}
+  \captionof{figure}{Dit voorbeeld toont de interface van een formulier, voorzien van diverse gegevensvelden voor zowel datavisualisatie als gebruikersinvoer, aangevuld met actieknoppen voor navigatie en functie-uitvoering.}
+\end{center}
+
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=1.0\linewidth]{id}
+  \captionof{figure}{Op de bijgevoegde screenshot zie je de visuele weergave van de interaction designer. Deze opzet illustreert mooi hoe de verschillende elementen met elkaar verbonden zijn om complexe handelingen op de achtergrond te stroomlijnen.}
+\end{center}
+
+\vspace*{\fill}
 
 \end{multicols}
 \end{document}

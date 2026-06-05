@@ -3,37 +3,28 @@
 
 In het vorige hoofdstuk werd de probleemstelling rondom het handmatige en foutgevoelige releaseproces bij Amaron toegelicht. Om een gerichte en toekomstbestendige oplossing te kunnen ontwerpen, is een goed begrip van de onderliggende technologieën, best practices en methodieken essentieel. Dit hoofdstuk schetst de theoretische achtergrond en de huidige stand van zaken binnen de domeinen van release management, automatisering en API-integraties. Deze literatuurstudie vormt de fundering voor de keuzes die in Hoofdstuk~\ref{ch:methodologie} (Methodologie) en de uiteindelijke realisatie worden gemaakt.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{grail.jpg}
-  \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
-\end{figure}
+\section{\IfLanguageName{dutch}{Release Management en CI/CD}{Release Management and CI/CD}}%
+\label{sec:release-management}
 
-\begin{listing}[htbp]
-\begin{minted}[autogobble,breaklines,linenos,frame=lines,tabsize=4]{python}
-import pandas as pd
-import seaborn as sns
+Traditioneel software release management was vaak een lineair en handmatig proces, waarbij verschillende componenten aan het einde van een ontwikkelcyclus werden samengevoegd. Met de transitie naar iteratieve ontwikkelmethoden, zoals de vaste releasecyclus van twee tot vier weken bij Amaron, is ook de behoefte aan snellere, geautomatiseerde releases toegenomen. [BRON: Humble2010] % \textcite{Humble2010} 
+schreven een van de standaardwerken over Continuous Integration (CI) en Continuous Delivery (CD). Zij benadrukken dat het automatiseren van het bouw-, test- en releaseproces cruciaal is om menselijke fouten te elimineren en de doorlooptijd te verkorten. 
 
-penguins = sns.load_dataset('penguins')
-sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
-\end{minted}
-  \caption[Voorbeeld codefragment]{\label{lst:penguins}Voorbeeld van het invoegen van een codefragment.}
-\end{listing}
+Binnen een ecosysteem dat uit tientallen onafhankelijke componenten bestaat, wordt CI/CD niet enkel een hulpmiddel, maar een absolute noodzaak om het overzicht te behouden [BRON: Fowler2006]. % \autocite{Fowler2006}
 
-\lipsum[7-20]
+\section{\IfLanguageName{dutch}{Componentenregistratie en Microservices}{Component Registry and Microservices}}%
+\label{sec:component-registry}
 
-\begin{table}
-  \centering
-  \begin{tabular}{lcr}
-    \toprule
-    \textbf{Kolom 1} & \textbf{Kolom 2} & \textbf{Kolom 3} \\
-    $\alpha$         & $\beta$          & $\gamma$         \\
-    \midrule
-    A                & 10.230           & a                \\
-    B                & 45.678           & b                \\
-    C                & 99.987           & c                \\
-    \bottomrule
-  \end{tabular}
-  \caption[Voorbeeld tabel]{\label{tab:example}Voorbeeld van een tabel.}
-\end{table}
+De architectuur van moderne software is in toenemende mate opgebouwd uit gedistribueerde systemen of microservices. Waar een monoliet als één geheel wordt ingezet, vereist een opgesplitst ecosysteem (zoals de circa 40 componenten en modules bij Amaron) dat elke module een eigen versiebeheer en registratiemechanisme heeft. Experten stellen dat het ontbreken van een gecentraliseerde registratie leidt tot grote knelpunten in de communicatie tussen ontwikkelaars en operations [BRON: Newman2015]. % \autocite{Newman2015} 
+Een decentraal systeem waarbij ontwikkelaars zelf de status van hun afgewerkte componenten registreren, verschuift de verantwoordelijkheid naar de bron en vermindert de administratieve last en miscommunicatie voor het DevOps-team.
 
+\section{\IfLanguageName{dutch}{API-integraties en Automatisering}{API Integrations and Automation}}%
+\label{sec:api-integraties}
+
+Om de status van de geregistreerde componenten onafhankelijk te kunnen verifiëren zonder handmatige tussenkomst, moeten systemen met elkaar kunnen communiceren. Application Programming Interfaces (API's) vormen de standaard voor deze machine-to-machine communicatie. Via API-koppelingen kan een verificatieplatform automatisch de status, het versienummer of de benodigde parameters opvragen en valideren bij onderliggende systemen. Hierdoor transformeert een proces dat voorheen afhankelijk was van menselijke afstemming via chat of e-mail, naar een objectief en foutloos geautomatiseerd proces.
+
+\section{\IfLanguageName{dutch}{Developer Dashboards en Zichtbaarheid}{Developer Dashboards and Visibility}}%
+\label{sec:dashboards}
+
+Data verzamelen en verifiëren via API's is slechts de eerste stap; deze gevalideerde data moet vervolgens bruikbaar worden gemaakt voor het DevOps-team. Een centraal dashboard fungeert als de ``Single Source of Truth'' voor de status van een release. Waar handmatige verificatie tijdrovend is en zeer foutgevoelig door verouderde informatie, biedt een geautomatiseerd dashboard realtime inzicht. Dit stelt het DevOps-team in staat om, exact zoals in de onderzoeksdoelstelling omschreven, in één oogopslag te bepalen welke componenten meegenomen moeten worden in de release.
+
+Samenvattend toont de literatuur en de industriestandaard aan dat de verschuiving van handmatige controles naar een geautomatiseerd, API-gedreven verificatieplatform met een centraal dashboard de aangewezen methode is om schaalbaarheid, snelheid en stabiliteit binnen een groeiend software-ecosysteem te garanderen.

@@ -1,47 +1,18 @@
-%%=============================================================================
-%% Samenvatting
-%%=============================================================================
-
-% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
-% thesis) synthese van het document.
-%
-% Een goede abstract biedt een kernachtig antwoord op volgende vragen:
-%
-% 1. Waarover gaat de graduaatsproef?
-% 2. Waarom heb je er over geschreven?
-% 3. Hoe heb je het onderzoek uitgevoerd?
-% 4. Wat waren de resultaten? Wat blijkt uit je onderzoek?
-% 5. Wat betekenen je resultaten? Wat is de relevantie voor het werkveld?
-%
-% Daarom bestaat een abstract uit volgende componenten:
-%
-% - inleiding + kaderen thema
-% - probleemstelling
-% - (centrale) onderzoeksvraag
-% - onderzoeksdoelstelling
-% - methodologie
-% - resultaten (beperk tot de belangrijkste, relevant voor de onderzoeksvraag)
-% - conclusies, aanbevelingen, beperkingen
-%
-% LET OP! Een samenvatting is GEEN voorwoord!
-
-%%---------- Nederlandse samenvatting -----------------------------------------
-%
-% TODO: Als je je graduaatsproef in het Engels schrijft, moet je eerst een
-% Nederlandse samenvatting invoegen. Haal daarvoor onderstaande code uit
-% commentaar.
-% Wie zijn/haar graduaatsproef in het Nederlands schrijft, kan dit negeren, de inhoud
-% wordt niet in het document ingevoegd.
-
-
-
-%%---------- Samenvatting -----------------------------------------------------
-% De samenvatting in de hoofdtaal van het document
-
-\chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
+\chapter*{Samenvatting}
+\addcontentsline{toc}{chapter}{Samenvatting}
 
 Binnen de softwareontwikkeling bij Amaron wordt gewerkt met een vaste releasecyclus van twee tot vier weken. Het bedrijf is opgebouwd uit een ecosysteem van inmiddels circa 40 verschillende componenten en modules, die gebundeld in de hoofdrelease worden uitgerold. Voorafgaand aan elke release is momenteel een handmatige controle vereist om te bepalen of al deze onderliggende modules gereed en compleet zijn voor integratie. Dit verificatieproces zorgt voor vele frustraties en is door de groeiende omvang van het ecosysteem tijdrovend en foutgevoelig geworden. Het gebrek aan een centraal overzicht leidt tot vertragingen in de doorlooptijd van de hoofdrelease, miscommunicatie en aanzienlijke frustraties binnen het ontwikkelteam.
 
 Om de efficiëntie en betrouwbaarheid van het releaseproces te waarborgen, is in deze graduaatsproef een geautomatiseerd verificatieplatform ontwikkeld. De realisatie hiervan is stapsgewijs en modulair aangepakt, waarbij verschillende API-koppelingen en automatiseringslogica zijn opgebouwd. Binnen de nieuwe workflow registreren developers zelf een component zodra deze gereed is. Na het doorlopen van alle automatische stappen en controles bundelt het platform deze data tot één centraal en overzichtelijk dashboard. Hierdoor kan het DevOps-team in één oogopslag effectief zien welke componenten gereed zijn en meegenomen moeten worden in de aankomende release.
 
 Hoewel het platform zich momenteel in de eindfase van het testproces bevindt, wijzen de eerste validaties op een sterke verbetering. Het systeem slaagt erin de status van de componenten onafhankelijk te verifiëren, waardoor de menselijke foutgevoeligheid en de tijd die benodigd is voor handmatige controles drastisch worden gereduceerd. De introductie van dit platform zorgt ervoor dat de componentregistratie en het releasebeheer aanzienlijk gestroomlijnder verlopen. Door de automatisering verdwijnt de complexiteit van de handmatige checks. Dit resulteert in een kortere doorlooptijd van releases, een vlottere interne communicatie en een duidelijke afname van de frustraties op de werkvloer. Hiermee is een schaalbare oplossing gecreëerd waarmee Amaron ook in de toekomst een groeiend aantal componenten efficiënt kan blijven beheren.
+
+\cleardoublepage
+\chapter*{Summary}
+\addcontentsline{toc}{chapter}{Summary}
+
+Within software development at Amaron, a fixed release cycle of two to four weeks is utilized. The company's software architecture consists of an ecosystem of approximately 40 different components and modules, which are bundled and deployed in the main release. Currently, prior to each release, a manual check is required to determine whether all these underlying modules are ready and complete for integration. This verification process causes significant friction and, due to the growing size of the ecosystem, has become time-consuming and error-prone. The lack of a centralized overview leads to delays in the lead time of the main release, miscommunication, and considerable frustration within the development team.
+
+To ensure the efficiency and reliability of the release process, an automated verification platform was developed in this professional bachelor's thesis. Its implementation was approached step-by-step and modularly, establishing various API integrations and automation logic. Within the new workflow, developers register a component themselves as soon as it is ready. After completing all automated steps and checks, the platform consolidates this data into a single centralized and clear dashboard. This allows the DevOps team to effectively see at a glance which components are ready and should be included in the upcoming release.
+
+Although the platform is currently in the final phase of the testing process, initial validations indicate a strong improvement. The system succeeds in independently verifying the status of the components, drastically reducing human error and the time required for manual checks. The introduction of this platform ensures that component registration and release management run significantly more streamlined. Automation eliminates the complexity of manual checks, resulting in a shorter release lead time, smoother internal communication, and a clear reduction in workplace frustration. This creates a scalable solution that enables Amaron to continue efficiently managing a growing number of components in the future.

@@ -462,8 +462,8 @@
     %\addvspace{10\bigskipamount}
     
     \begingroup
-      %% Print the title in the faculty color
-      \titlefont\color{title}\Huge\@title\@addpunct{.}\\
+      %% Print the title in the document title color
+      \titlefont\color{donkerrood}\Huge\@title\@addpunct{.}\\
       %% Optionally print a subtitle
       \ifx\@subtitle\@empty\else
         \bigskip
@@ -471,11 +471,15 @@
       \fi
       \hrule
     \endgroup
-    \bigskip
     \begingroup
       %% Print the name of the author
       \subtitlefont\Large\bfseries \@author\@addpunct{.}
     \endgroup
+    
+    \vspace{1cm}
+    \begin{center}
+      \includegraphics[height=7cm,keepaspectratio]{amaron}
+    \end{center}
     
     \vfill
     
