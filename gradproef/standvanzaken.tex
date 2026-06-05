@@ -9,15 +9,15 @@ In het vorige hoofdstuk werd de probleemstelling rondom het handmatige en foutge
   \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
 \end{figure}
 
-\begin{listing}
-  \begin{minted}{python}
-    import pandas as pd
-    import seaborn as sns
+\begin{listing}[htbp]
+\begin{minted}[autogobble,breaklines,linenos,frame=lines,tabsize=4]{python}
+import pandas as pd
+import seaborn as sns
 
-    penguins = sns.load_dataset('penguins')
-    sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
-  \end{minted}
-  \caption[Voorbeeld codefragment]{Voorbeeld van het invoegen van een codefragment.}
+penguins = sns.load_dataset('penguins')
+sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
+\end{minted}
+  \caption[Voorbeeld codefragment]{\label{lst:penguins}Voorbeeld van het invoegen van een codefragment.}
 \end{listing}
 
 \lipsum[7-20]
